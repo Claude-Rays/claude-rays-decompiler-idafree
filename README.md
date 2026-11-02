@@ -1,10 +1,10 @@
 # Claude-Rays Decompiler for IDA Free/Pro
 
-**Decompile, analyze and patch a function with Claude, working from the disassembly.** A native plugin for IDA Free/Pro 9.4+: it needs neither Hex-Rays nor IDAPython, so it gives IDA Free readable C, a security review and suggested fixes for any x86/x64 function.
+**Decompile, analyze and patch a function with Claude, working from the disassembly.** A native plugin for IDA Free/Pro 9.5+: it needs neither Hex-Rays nor IDAPython, so it gives IDA Free readable C, a security review and suggested fixes for any x86/x64 function.
 
 ![Decompile, analyze and patch a function](screenshots/decompile-analyze-patch.gif)
 
-> **Note:** So far the plugin has only been tested on Windows, with IDA Free 9.4 and x86/x64 binaries. It is a native plugin built with the current SDK, so it should work in IDA Pro too.
+> **Note:** So far the plugin has only been tested on Windows, with IDA Free 9.4 and 9.5, and x86/x64 binaries. It is a native plugin built with the current SDK, so it should work in IDA Pro too.
 
 It has a Ghidra sibling, [Claude-Rays Decompiler for Ghidra](https://github.com/Claude-Rays/claude-rays-decompiler-ghidra), with the same prompts, validation and cache, and it is the engine behind *Claude diff pseudo-code* in [Diaphora-ng for IDA Free/Pro](https://github.com/Claude-Rays/diaphora-ng-idafree).
 
@@ -43,7 +43,7 @@ The three commands on `GetZoneFromAlternateDataStreamEx` of urlmon.dll (October 
 
 ## Requirements
 
-- IDA Free/Pro 9.4+ on Windows, x86/x64 binaries.
+- IDA Free/Pro 9.5+ on Windows, x86/x64 binaries.
 - [Claude Code](https://claude.com/claude-code), installed and logged in (run `claude`, then `/login`). Tested with CLI 2.1.301; `--effort` needs a recent version.
 - A Claude subscription (Pro/Max) or pay-as-you-go API billing. No API key is stored by the plugin: it runs the `claude` CLI, which uses your own login.
 
@@ -65,7 +65,7 @@ build.bat clean    :: build from scratch
 
 ## Install
 
-Copy `clauderays-decompiler.dll` to the `plugins` folder of your IDA installation (e.g. `C:\Program Files\IDA Free 9.4\plugins\`, needs admin) or to `%APPDATA%\Hex-Rays\IDA Pro\plugins\`. Keep that file name: Diaphora-ng looks for the plugin by it.
+Copy `clauderays-decompiler.dll` to the `plugins` folder of your IDA installation (e.g. `C:\Program Files\IDA Free 9.5\plugins\`, needs admin) or to `%APPDATA%\Hex-Rays\IDA Pro\plugins\`. Keep that file name: Diaphora-ng looks for the plugin by it.
 
 ## Usage
 
